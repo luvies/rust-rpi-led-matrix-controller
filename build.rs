@@ -12,6 +12,6 @@ fn main() {
 
     println!(
         r"cargo:rustc-link-search={}/vendor/rpi-rgb-led-matrix/lib",
-        env::current_dir().unwrap()
+        env::current_dir().unwrap().display()
     );
 }
