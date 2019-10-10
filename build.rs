@@ -1,6 +1,6 @@
+use std::env;
 use std::path::Path;
 use std::process::Command;
-use std::env
 
 fn main() {
     let matrix_lib = Path::new("vendor/rpi-rgb-led-matrix");
@@ -10,5 +10,8 @@ fn main() {
         .status()
         .unwrap();
 
-    println!(r"cargo:rustc-link-search={}/vendor/rpi-rgb-led-matrix/lib", env::current_dir().unwrap());
+    println!(
+        r"cargo:rustc-link-search={}/vendor/rpi-rgb-led-matrix/lib",
+        env::current_dir().unwrap()
+    );
 }
