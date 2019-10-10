@@ -1,9 +1,11 @@
 [package]
-name = "rust-rpi-led-matrix-controller"
+name = "rust_rpi_led_matrix_controller"
 version = "0.1.0"
 authors = ["luvies"]
 edition = "2018"
+build = "build.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+rpi-led-matrix = { git = "https://github.com/sphinxc0re/rust-rpi-rgb-led-matrix" }
